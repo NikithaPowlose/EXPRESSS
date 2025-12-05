@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TRAVERL WEBSITE</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= welcomeMsg %></h1>
+
+    <% for (let place of places) { %>
+        <h3><%= place.name %> - <%= place.country %></h3>
+
+        <% if (place.isPopular) { %>
+            <p>Popular Destination!</p>
+        <% } %>
+        <hr>
+    <% } %>
+
+    <script>
+        alert("Welcome to the Travel Website!");
+    </script>
+  </body>
+</html>

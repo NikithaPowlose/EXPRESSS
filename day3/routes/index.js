@@ -3,13 +3,15 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var  storeName="MY Book Store";
-  var books=[
-    {'title':'BBC','author':"MIKE"},
-    {'title':'TALES','author':"MAX"},
-    {'title':'CHANGE','author':"VECNA"}
-  ]
-  res.render("index", {storeName:storeName,books : books});
+ const travelPlaces = [
+    { name: "Paris", country: "France", isPopular: true },
+    { name: "Kyoto", country: "Japan", isPopular: false },
+    { name: "Bali", country: "Indonesia", isPopular: true }
+  ];
+res.render("index", { 
+    welcomeMsg: "Welcome to World Explorer!",
+    places: travelPlaces
+  });
 });
 
 module.exports = router;
